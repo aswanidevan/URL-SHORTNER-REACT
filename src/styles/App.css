@@ -1,0 +1,104 @@
+ :root {
+  --blue: #1e90ff;
+  --tblue: #7DE2D1;
+  --vblue: #8ca0d7;
+  --olive-black: #1f271b;
+  --ivory: #f9f9ed;
+  --white: #ffffff;
+  --black:#000000;
+  
+}
+
+.bg-color-blue{
+  background-color: var(--blue);
+}
+
+
+.bg-color-tblue{
+  background-color: var(--tblue);
+}
+.bg-color-tblue-dark{
+  background-color: #3F7169;
+}
+.bg-color-vblue{
+  background-color: var(--vblue);
+}
+
+.bg-color-olive-black{
+  background-color: var(--olive-black);
+}
+
+.bg-color-ivory {
+  background-color: var(--ivory);
+}
+.color-blue{
+  color: var(--blue);
+}
+.color-tblue{
+  color: var(--tblue);
+}
+
+.color-vblue{
+  color: var(--vblue);
+}
+.color-white{
+  color: var(--white);
+}
+
+.color-olive-black{
+  color: var(--olive-black);
+}
+.color-ivory *{
+  color: var(--ivory);
+}
+.color-vblue-contrast{
+  color: #112A46;
+}
+.font-bradley{
+  font-family: "zantrokeregular", cursive ,serif;
+}
+
+
+
+
+
+
+/* .bg-gradient-nav
+{
+  background-image: linear-gradient(to top,  var(--vblue)  0%,  var(--tblue) 100%);
+}
+.gradient-text{
+  font-family: "zantrokeregular", serif;
+  background: linear-gradient(to top,#112A46 0%,#112A46 50%,#112A46 75%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  
+} */ 
+.bg-gradient-blue-green{
+  background-image: linear-gradient(  135deg, #30cfd0 0%, #330867 100%);
+  
+}
+
+.bg-gradient-blue-green-1{
+  background-image: linear-gradient(  74deg, #30cfd0 0%, #330867 100%);
+  
+}
+.bg-gradient-blue-green-2{
+  background-image: linear-gradient(  103deg, #30cfd0 0%, #330867 100%);
+  
+}
+
+
+.g-gradient-green-blue2
+{
+  background-image: linear-gradient(to top, #330867 0%, #30cfd0 50%);
+}
+
+
+.text-shadow-light{
+  text-shadow: 2px 2px #00000054;
+}
+.text-shadow-light-2 {
+  text-shadow: 2px 2px #55535340;
+}
