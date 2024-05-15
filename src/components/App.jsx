@@ -1,23 +1,26 @@
 // import { useState } from 'react'
-import '../styles/App.css'
-import NavBar from './NavBar'
-import Header from './Header'
-import UrlShortnerApp from './UrlShortnerApp'
-import Footer from './Footer'
-import BgAnimation from './BgAnimation'
+  import AppPage from './AppPage'
+  import React from 'react';
+  import { BrowserRouter, Route, Routes,Outlet } from 'react-router-dom';
+  import RedirectPage from './RedirectPage';
+  import About from './About';
 
-function App() {
- 
 
-  return (
-    <>  
-      <NavBar/>
-      <Header/>
-      <UrlShortnerApp/>
-      <Footer/>
-      <BgAnimation/>
-    </>
-  );
-}
+  function App() {
+  
 
-export default App
+    return (
+      <>  
+          <BrowserRouter>
+        <Routes>
+          <Route  path="/" element={<AppPage/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/:shortUrl" element={<RedirectPage />} />
+        </Routes>
+      </BrowserRouter>
+      
+      </>
+    );
+  }
+
+  export default App

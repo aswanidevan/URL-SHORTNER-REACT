@@ -1,25 +1,21 @@
-import { Container } from "react-bootstrap";
+
 import ShortUrlRow from "./ShortUrlRow";
 
 function UrlList({list}){
-    console.log(list);
-    list.map((item,i)=>{ console.log(item.msg+' '+i)})
     return( 
-    <> 
-    
-        <div className="d-flex flex-column-reverse adjustSize">
+    <> <div className="adjustSize ">
+        <div className="d-flex flex-column-reverse ">
       {
-      list.map((item,i) => {
+      list.slice(-3).map((item,i) => {
         return(
         <ShortUrlRow key={i}
-          msg={item.msg}
           originalUrl={item.originalUrl}
           shortenedUrl={item.shortenedUrl}
         />
-
         )
       })
       }
+        </div>
         </div>
     </>
 )

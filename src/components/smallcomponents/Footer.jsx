@@ -8,7 +8,7 @@ function Footer() {
                 <Row>
                     <Col md='5'>
 
-                <Row href="#" className="  fs-1     fw-semibold ">BYTE URL</Row>
+                <Row href="#" className="  fs-1      fw-semibold ">BiTE URL</Row>
                 <Row href="#" className="  fs-10     fw-lighter ">Get Your Byte URL</Row>
                 </Col>
                 <Col  md='5 '>

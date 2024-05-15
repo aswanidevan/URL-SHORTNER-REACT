@@ -1,7 +1,11 @@
-import { useState } from 'react';
+import { useState,useEffect  } from 'react';
 import UrlList from './UrlList';
 import UrlShortnerForm from './UrlShortenerForm';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export const apiURL =import.meta.env.VITE_API_URL;
 
@@ -11,6 +15,21 @@ function UrlShortnerApp() {
     originalUrl: '',
     urlSize: '5'
   });
+
+  const location = useLocation();
+
+
+  useEffect(() => {
+    if (location.state && location.state.msg) {
+      toast(location.state.msg);
+      location.state.msg='';
+    }
+
+  }, [location]);
+ 
+  const notify=   (toastMsg) => {
+    toast(toastMsg);
+  }
 
   const [urlsShortened, setUrlsShortened] = useState([]);
 
@@ -25,15 +44,15 @@ function UrlShortnerApp() {
     event.preventDefault();
     try {
       // Send form data to the local host using Axios
-      console.log(apiURL);
       const response = await axios.post(`${apiURL}/api/shortenUrl`, formData);
-      console.log(response.data); // Log the response data
-      setUrlsShortened([...urlsShortened, response.data]);
-      
-      // Handle the response as needed
-    } catch (error) {
+      const {msg}=response.data
+      notify( msg);
+      setUrlsShortened([...urlsShortened, response.data]);      
+    } 
+    catch (error) {
       console.error('Error:', error);
-      // Handle errors
+      notify( "Failed to Connect to API");
+      
     }
   };
 
@@ -44,8 +63,6 @@ function UrlShortnerApp() {
         handleSubmit={handleSubmit} 
         />
         <UrlList list={urlsShortened} />
-     
-
     </>)
     
 }

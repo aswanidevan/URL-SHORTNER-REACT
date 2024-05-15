@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="208.051 198.412 45.918 44.218" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="153.912" cy="157.029" r="22.959" id="gradient-0" gradientTransform="matrix(1, 0, 0, 1, 77.097502, 63.492062)">
+      <stop offset="0" style="stop-color: #bada55"/>
+      <stop offset="1" style="stop-color: #758d29"/>
+    </radialGradient>
+  </defs>
+  <ellipse style="fill: url('#gradient-0'); stroke: rgba(255, 255, 255, 0);" cx="231.01" cy="220.521" rx="22.959" ry="22.109" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)"/>
+  <text style="fill: rgb(71, 236, 222); font-family: Arial, sans-serif; font-size: 28px; white-space: pre;" x="217.687" y="230.159" transform="matrix(1, 0, 0, 1, 7.105427357601002e-15, 0)">Bi</text>
+</svg>

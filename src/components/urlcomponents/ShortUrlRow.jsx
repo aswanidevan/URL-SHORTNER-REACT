@@ -1,20 +1,15 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
 import { FaCopy } from "react-icons/fa";
+import {  toast } from 'react-toastify';
 
-
-function ShortUrlRow({ msg, originalUrl, shortenedUrl }) {
-
+function ShortUrlRow({originalUrl, shortenedUrl }) {
 
   const sUrl=window.location.protocol+'//'+window.location.host+"/"+shortenedUrl;
 
   return (
     <Container >
-      <Row className="mb-3 p-4 rounded-5 bg-field-label">
-        <Col>
-          <p>Message: {msg}</p>
-        </Col>
-      
+      <Row className="mb-3 p-1 rounded-5 bg-field-label">
         <Col>
           <p>Original URL: {originalUrl}</p>
         </Col>
@@ -23,9 +18,8 @@ function ShortUrlRow({ msg, originalUrl, shortenedUrl }) {
           <p  value={window.location.href+shortenedUrl}>Shortened URL: {sUrl}</p>
         </Col>
         <Col md={1}>
-        <CopyToClipboard text={sUrl}><FaCopy/></CopyToClipboard>
+        <CopyToClipboard text={sUrl}  ><FaCopy onClick={  () => toast("Copied to Clipboard")}/></CopyToClipboard>
         </Col>
-          
       </Row>
     </Container>
   );
