@@ -1,7 +1,7 @@
 {
   "name": "url-shortner-react",
   "private": true,
-  "proxy": "http://127.0.0.1:3000",
+  "proxy": "VITE_API_URL",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -20,6 +20,7 @@
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
     "is-url-http": "^2.3.8",
+    "ldrs": "^1.0.1",
     "peerdeps": "^1.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
