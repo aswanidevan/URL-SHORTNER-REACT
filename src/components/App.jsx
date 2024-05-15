@@ -2,7 +2,9 @@
 import '../styles/App.css'
 import NavBar from './NavBar'
 import Header from './Header'
-import UrlShortnerApp from './UrlShortnerApp';
+import UrlShortnerApp from './UrlShortnerApp'
+import Footer from './Footer'
+import BgAnimation from './BgAnimation'
 
 function App() {
  
@@ -12,7 +14,8 @@ function App() {
       <NavBar/>
       <Header/>
       <UrlShortnerApp/>
-
+      <Footer/>
+      <BgAnimation/>
     </>
   );
 }
