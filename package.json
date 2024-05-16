@@ -1,6 +1,7 @@
 {
   "name": "url-shortner-react",
-  "private": true,
+  "homepage": "https://aswanidevan.github.io/URL-SHORTNER-REACT/",
+  "private": false,
   "proxy": "VITE_API_URL",
   "version": "0.0.0",
   "type": "module",
@@ -8,7 +9,8 @@
     "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -19,6 +21,7 @@
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "is-url-http": "^2.3.8",
     "ldrs": "^1.0.1",
     "peerdeps": "^1.1.1",
