@@ -64,7 +64,7 @@ const [retrivedUrl, setRetrivedUrl] = useState([]);
       setUrlsShortened([...urlsShortened, response.data]);      
     } 
     catch (error) {
-      console.error('Error:', error);
+      //console.error('Error:', error);
       notify( "Failed to Connect to API");
       
     }
@@ -92,7 +92,7 @@ const [retrivedUrl, setRetrivedUrl] = useState([]);
       else    notify( msg);
     } 
     catch (error) {
-      console.error('Error:', error);
+     // console.error('Error:', error);
       notify("Unable to connect to API");
       
     }

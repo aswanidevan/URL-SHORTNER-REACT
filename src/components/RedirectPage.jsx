@@ -5,7 +5,7 @@ import { dotWave } from 'ldrs'
 
 
 //get ENV VARIABLE
-const apiURL = import.meta.env.VITE_API_URL;
+const apiURL = import.meta.env.VITE_API_URL||"https://bite-urls-api.onrender.com";
 
 function RedirectPage() {
   //get params for redirect
@@ -22,7 +22,7 @@ function RedirectPage() {
         else  navigate('/', { state: { msg: msg } });                 //Go to Home with msg
       }
       catch (error) {
-        console.error('Error:', error);
+     //   console.error('Error:', error);
         navigate('/',{state: {msg:"Unable to connect to API"}});      //Failed to fetch URL Go to Home with msg
       }
     };
