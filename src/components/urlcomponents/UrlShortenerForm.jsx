@@ -1,18 +1,21 @@
-import { Col,Row, Container, Button,Modal, InputGroup  } from 'react-bootstrap';
+import { Col,Row, Container, Button, InputGroup  } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
-import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faGreaterThan } from '@fortawesome/free-solid-svg-icons';
 
 
-function UrlShortnerForm({ handleChange,  handleSubmit}){
+function UrlShortnerForm({formData, handleChange,  handleSubmit}){
+
+    
+
+
     return( 
     <> <form onSubmit={handleSubmit} className=''>
     <Container  className=' mx-auto p-5'>
    <Row >
     <Col>
     <InputGroup className="mb-3 mx-5">
-        <Form.Control type="url" name='originalUrl' placeholder="https://www.example.com/abc" required className='rounded-start-5 input-fields-bg' onChange={handleChange} />
+        <Form.Control type="url" name='originalUrl'   value={formData.originalUrl}  placeholder="https://www.example.com/abc" required className='rounded-start-5 input-fields-bg' onChange={handleChange} />
         <Button className='rounded-end-5 bg-field-label p-3 m-0'  type="submit"><span className='d-none d-sm-inline'>Shorten Url</span>  <FontAwesomeIcon icon={faGreaterThan} /></Button>
       </InputGroup>
     </Col>
